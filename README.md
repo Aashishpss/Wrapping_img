@@ -1,4 +1,4 @@
-Image Wrapping on Mouse Click
+## Image Wrapping on Mouse Click
 
 This project allows users to select four points on an image by clicking with the mouse. Once four points are selected, the program performs a perspective transformation, "wrapping" the image to a rectangular shape based on the clicked points.
 Features
@@ -33,20 +33,20 @@ Usage
 Code Overview
 1. Image Loading and Resizing
 
-The image is loaded using OpenCV, and resized for better performance.
+        The image is loaded using OpenCV, and resized for better performance.
 2. Mouse Click Event
 
-    A mouse callback function is used to capture the coordinates of the points clicked by the user.
-    The coordinates of the four points are stored in a list.
+        A mouse callback function is used to capture the coordinates of the points clicked by the user.
+        The coordinates of the four points are stored in a list.
 
 3. Reordering Points
 
-    A helper function reorder() takes the list of points and arranges them in the correct order: top-left, top-right, bottom-right, and bottom-left.
+        A helper function reorder() takes the list of points and arranges them in the correct order: top-left, top-right, bottom-right, and bottom-left.
 
 4. Perspective Transformation
 
-    After selecting the points, a perspective transformation matrix is calculated using the selected points and applied to the image using OpenCV’s cv2.warpPerspective() function.
+        After selecting the points, a perspective transformation matrix is calculated using the selected points and applied to the image using OpenCV’s cv2.warpPerspective() function.
 
 5. Displaying the Output
 
-    The program shows the original image with circles marking the clicked points and the transformed image in a separate window.
+        The program shows the original image with circles marking the clicked points and the transformed image in a separate window.
